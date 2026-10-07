@@ -1,0 +1,22 @@
+{
+  "name": "lisa-npm-updater-acceptance",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Controlled safe fixture for genuine Lisa npm updater acceptance",
+  "type": "commonjs",
+  "packageManager": "npm@11.21.0",
+  "engines": {
+    "node": "22.23.3",
+    "npm": "11.21.0"
+  },
+  "scripts": {
+    "test": "node test.cjs"
+  },
+  "dependencies": {
+    "is-number": "6.0.0"
+  },
+  "devDependencies": {
+    "@codyswann/lisa": "4.71.0",
+    "husky": "8.0.3"
+  }
+}

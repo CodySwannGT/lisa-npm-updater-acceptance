@@ -1,0 +1,17 @@
+name: Selected safe dependency update
+on:
+  workflow_dispatch:
+permissions: {}
+jobs:
+  update:
+    uses: CodySwannGT/lisa/.github/workflows/npm-updater.yml@a1f7ee64bb77d2cb174c361ec4a6023cc24863fa
+    with:
+      expected_workflow_contract_major: '1'
+      npm-version: '11.21.0'
+    permissions:
+      contents: write
+      actions: read
+      issues: write
+      pull-requests: write
+      id-token: write
+      attestations: write

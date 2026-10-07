@@ -1,0 +1,4 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+set -eu
+node scripts/lisa-work-item.mjs prepare-commit-msg "$@"

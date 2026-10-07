@@ -1,0 +1,37 @@
+name: Observe default token policy access
+on:
+  workflow_dispatch:
+permissions: {}
+jobs:
+  observe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 2
+    permissions:
+      contents: write
+      actions: read
+      issues: write
+      pull-requests: write
+      attestations: read
+    steps:
+      - name: Report only the real default-token endpoint status
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          REPOSITORY_ID: ${{ github.repository_id }}
+          OWNER_ID: ${{ github.repository_owner_id }}
+        run: |
+          node --input-type=module <<'NODE'
+          const repository = process.env.REPOSITORY;
+          if (repository !== 'CodySwannGT/lisa-npm-updater-acceptance' || process.env.REPOSITORY_ID !== '1408260875' || process.env.OWNER_ID !== '292923') throw Error('fixture identity differs');
+          const result = await fetch(`https://api.github.com/repos/${repository}/actions/permissions/workflow`, {
+            headers: {
+              Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+              Accept: 'application/vnd.github+json',
+              'X-GitHub-Api-Version': '2022-11-28'
+            },
+            redirect: 'error',
+            signal: AbortSignal.timeout(30000)
+          });
+          console.log(`DEFAULT_TOKEN_POLICY_HTTP_STATUS=${result.status}`);
+          await result.body?.cancel();
+          NODE

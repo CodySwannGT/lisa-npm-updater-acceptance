@@ -1,0 +1,34 @@
+{
+  "harness": "codex",
+  "autoUpdate": true,
+  "tracker": "github",
+  "github": {
+    "org": "CodySwannGT",
+    "repo": "lisa-npm-updater-acceptance"
+  },
+  "workItem": { "verify": "full" },
+  "npmUpdater": {
+    "version": 1,
+    "repository": "CodySwannGT/lisa-npm-updater-acceptance",
+    "directory": ".",
+    "target": "main",
+    "maintainer": "CodySwannGT",
+    "packages": [{ "name": "is-number", "version": "7.0.0" }],
+    "lisaOwner": "verified-local-full-apply"
+  },
+  "automationProvenance": {
+    "enabled": true,
+    "version": 1,
+    "repository": "CodySwannGT/lisa-npm-updater-acceptance",
+    "repositoryId": "1408260875",
+    "ownerId": "292923",
+    "claimActorId": "41898282",
+    "signerWorkflow": "CodySwannGT/lisa/.github/workflows/npm-updater.yml",
+    "signerDigest": "a1f7ee64bb77d2cb174c361ec4a6023cc24863fa",
+    "callerWorkflow": "CodySwannGT/lisa-npm-updater-acceptance/.github/workflows/npm-update.yml",
+    "allowedTriggers": ["workflow_dispatch"],
+    "maxAgeSeconds": 86400,
+    "ghExecutable": "/usr/local/bin/gh",
+    "ghSha256": "56b8bbbb27b066ecb33dbef9a256dc9d1314adaeff0908a752feba6c34053b40"
+  }
+}
