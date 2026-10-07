@@ -15,7 +15,15 @@ Husky 8.0.3 hooks, genuine default token and original provider policy.
 
 Verify repeat full apply, frozen npm installation, native dependency behavior,
 production audit and ordinary commit/push hooks. Submit and merge this adoption
-through the existing protected merge contract before retrying the actual
+through the ordinary Lisa merge workflow before retrying the actual
 hosted updater. Preserve the prior failed run and allocated proposal leaf as
 recovery evidence. The new release adds bounded gate diagnostics. Adoption
 does not itself prove bot publication, current-head CI or human approval.
+
+The fixture initially has no pull-request CI. Add a read-only host workflow
+that runs its existing native assertions, frozen installation and production
+audit, and validates the complete PR range/body/backlink with the canonical
+helper from the immutable base checkout. Keep validation credentials out of
+package installation and dependency execution. Preserve existing provider
+policy; this adds observable native check runs without claiming a review or
+protected-branch requirement that the fixture does not configure.
