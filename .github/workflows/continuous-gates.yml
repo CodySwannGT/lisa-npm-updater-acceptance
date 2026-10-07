@@ -106,7 +106,7 @@ jobs:
   continuous:
     name: 🌙 Continuous Gates
     needs: configured
-    uses: CodySwannGT/lisa/.github/workflows/gates.yml@022afbaf9e08fb04779177db5e43d8570e82de41 # v4.71.2
+    uses: CodySwannGT/lisa/.github/workflows/gates.yml@09c6e084c8fb2b635807d8a8b993c279b9e1aa8d # v4.71.3
     with:
       # Travels with the `uses:` line above — the two are one unit. Lisa's
       # reusable workflows are tracked at `@main`, so that file changes under
