@@ -24,7 +24,7 @@
     "ownerId": "292923",
     "claimActorId": "41898282",
     "signerWorkflow": "CodySwannGT/lisa/.github/workflows/npm-updater.yml",
-    "signerDigest": "022afbaf9e08fb04779177db5e43d8570e82de41",
+    "signerDigest": "09c6e084c8fb2b635807d8a8b993c279b9e1aa8d",
     "callerWorkflow": "CodySwannGT/lisa-npm-updater-acceptance/.github/workflows/npm-update.yml",
     "allowedTriggers": ["workflow_dispatch"],
     "maxAgeSeconds": 86400,

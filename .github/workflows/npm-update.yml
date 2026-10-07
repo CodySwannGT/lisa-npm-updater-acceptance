@@ -1,13 +1,32 @@
 name: Selected safe dependency update
 on:
   workflow_dispatch:
+    inputs:
+      cancel_issue:
+        description: Stale prepublication proposal issue to cancel explicitly
+        type: string
+        required: false
+        default: ""
+      cancel_proposal_key:
+        description: Exact original proposal key for that cancellation
+        type: string
+        required: false
+        default: ""
+      cancel_expected_main:
+        description: Exact current main commit authorizing the cancellation
+        type: string
+        required: false
+        default: ""
 permissions: {}
 jobs:
   update:
-    uses: CodySwannGT/lisa/.github/workflows/npm-updater.yml@022afbaf9e08fb04779177db5e43d8570e82de41
+    uses: CodySwannGT/lisa/.github/workflows/npm-updater.yml@09c6e084c8fb2b635807d8a8b993c279b9e1aa8d
     with:
-      expected_workflow_contract_major: '1'
-      npm-version: '11.21.0'
+      expected_workflow_contract_major: "1"
+      npm-version: "11.21.0"
+      cancel_issue: ${{ inputs.cancel_issue }}
+      cancel_proposal_key: ${{ inputs.cancel_proposal_key }}
+      cancel_expected_main: ${{ inputs.cancel_expected_main }}
     permissions:
       contents: write
       actions: read
