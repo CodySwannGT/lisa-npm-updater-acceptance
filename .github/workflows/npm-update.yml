@@ -4,7 +4,7 @@ on:
 permissions: {}
 jobs:
   update:
-    uses: CodySwannGT/lisa/.github/workflows/npm-updater.yml@a1f7ee64bb77d2cb174c361ec4a6023cc24863fa
+    uses: CodySwannGT/lisa/.github/workflows/npm-updater.yml@d0b0b904116419d726e950ab45111598b41c764e
     with:
       expected_workflow_contract_major: '1'
       npm-version: '11.21.0'
