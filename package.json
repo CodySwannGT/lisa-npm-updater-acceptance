@@ -16,7 +16,7 @@
     "is-number": "6.0.0"
   },
   "devDependencies": {
-    "@codyswann/lisa": "4.71.3",
+    "@codyswann/lisa": "4.71.4",
     "husky": "8.0.3"
   }
 }
